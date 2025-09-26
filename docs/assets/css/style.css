@@ -1,0 +1,448 @@
+:root {
+  --color-primary: #0A6B8A;    /* Azul petróleo - botones, encabezados */
+  --color-accent: #F6A623;     /* Ámbar/dorado - CTAs */
+  --color-bg-light: #F8FAFC;   /* Fondo principal */
+  --color-text-dark: #0F172A;  /* Texto principal */
+  --color-secondary: #7C3AED;  /* Acento secundario (opcional, links) */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* puedes ajustar entre 500–700 según look */
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: flex-start; /* logo a la izquierda, links después */
+  align-items: center;
+  gap: 500px; /* separación significativa entre logo y links */
+  padding: 30px;
+  z-index: 1000; /* asegura que quede sobre el contenido */
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: var(--color-accent); /* ahora el color base es el acento */
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+.navbar .nav-links a:hover {
+  color: white; /* cambia a blanco para resaltar */
+}
+
+body {
+  padding-top: 80px; /* evita que el hero quede tapado */
+}
+
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px; /* deja aire y compensa el navbar fijo */
+  background-color: var(--color-bg-light);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin-bottom: 40px;
+  color: var(--color-text-dark);
+  text-align:center;
+}
+
+/* Contenedor de CTAs */
+.hero-ctas {
+  display: flex;
+  gap: 20px; /* separación significativa */
+  background-color: var(--color-primary);
+  padding: 20px 30px;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+/* Botones */
+.hero-ctas a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: var(--color-accent); /* texto en color acento */
+  transition: all 0.3s ease;
+  font-size: 30px;
+}
+
+/* Diferenciar hover */
+.hero-ctas a:hover {
+  color: white;
+  background-color: var(--color-secondary); /* opcional, toque dinámico */
+}
+
+.value-props {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--color-primary);
+}
+
+.props-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.prop-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid var(--accent-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prop-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.prop-card h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.prop-card p {
+  color: #333;
+}
+
+/* Para el tercer elemento ocupando el centro */
+.prop-card:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 500px;
+}
+
+.featured-services {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.featured-services h2 {
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-primary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid var(--accent-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.service-card p {
+  color: #333;
+}
+
+/* Para el tercer servicio centrado */
+.service-card:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 500px;
+}
+
+.testimonials {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--color-primary);
+}
+
+.testimonials h2 {
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-bg-light);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-left: 4px solid var(--accent-color);
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.como-empezar {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--color-bg-light);
+}
+
+.como-empezar h2 {
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-primary);
+  font-size: 2.2rem;
+}
+
+.como-empezar p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+}
+
+.btn-primary {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.planes {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fafafa;
+  background-color: var(--color-primary);
+}
+
+.planes h2{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-bg-light);
+}
+
+.planes p{
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: var(--color-bg-light);
+}
+
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.plan-card p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.plan-card button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.plan-card button:hover {
+  background: #005fcc;
+}
+
+.faq {
+  margin: 80px 0; /* separa del bloque superior e inferior */
+  padding: 60px 20px;
+  background: #fff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.faq-list details {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.faq-list details:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.faq-list p {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contacto h2 {
+  margin-bottom: 20px;
+  font-family: var(--font-heading);
+  color: var(--color-bg-light);
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.contacto input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contacto button {
+  align-self: center;
+  background-color: var(--color-bg-light);
+}
+
+.legal {
+  font-size: 0.9rem;
+  background-color: var(--color-primary);
+}
+
+.legal a {
+  color: var(--color-bg-light);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
